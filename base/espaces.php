@@ -68,7 +68,7 @@ function espaces_declarer_tables_objets_sql($tables) {
 		'titre' => 'titre AS titre, lang AS lang',
 		#'date' => '',
 		'champs_editables'  => array('titre', 'descriptif', 'texte',  'mesure', 'unite'),
-		'champs_versionnes' => array('titre', 'descriptif', 'texte',, 'mesure', 'unite'),
+		'champs_versionnes' => array('titre', 'descriptif', 'texte', 'mesure', 'unite'),
 		'rechercher_champs' => array("titre" => 8, "descriptif" => 5, 'texte',),
 		'tables_jointures'  => array('spip_espaces_liens'),
 		'statut_textes_instituer' => array(
