@@ -6,18 +6,20 @@
 	compatibilite="[3.0.0;3.2.*]"
 	logo="prive/themes/spip/images/espaces-64.png"
 	documentation="https://github.com/abelass/espaces"
-	schema="1.0.0" 
+	schema="1.0.0"
 >
 	<!--
 		Paquet généré le 2018-05-26 08:40:42
-		(Vous pouvez bien entendu supprimer ces commentaires) 
+		(Vous pouvez bien entendu supprimer ces commentaires)
 	-->
 
 	<nom>Espaces</nom>
 	<!-- Gestion d&#039;espaces -->
 
-	<!-- cette balise peut être présente plusieurs fois s'il y a plusieurs auteurs --> 
+	<!-- cette balise peut être présente plusieurs fois s'il y a plusieurs auteurs -->
 	<auteur lien='https://websimple.be'>Rainer Müller</auteur>
+
+	<credit lien='https://www.flaticon.com'>www.flaticon.com</credit>
 
 	<licence>GNU/GPL v3</licence>
 
@@ -30,26 +32,26 @@
 		* pipelines
 		<pipeline nom="autoriser" inclure="espaces_autorisations.php" />
 		<pipeline nom="insert_head" inclure="espaces_pipelines.php" />
-		* declarer un pipeline 
+		* declarer un pipeline
 		<pipeline nom="mon_pipeline" action="" />
 		* parents de menus de SPIP :
 				menu_accueil (à éviter), menu_edition, menu_publication,
-				menu_activite, menu_squelette, menu_administration, menu_configuration 
+				menu_activite, menu_squelette, menu_administration, menu_configuration
 		<menu nom="espaces" titre="espaces:espaces_titre" parent="menu_edition"  icone="images/espaces-16.png" />
-		* parents d'onglets... configuration, plugins, statistiques, ... 
+		* parents d'onglets... configuration, plugins, statistiques, ...
 		<onglet nom="espaces" titre="espaces:espaces_titre" parent="configuration" icone="images/espaces-24.png" />
 	-->
 
-	<necessite nom="saisies" compatibilite="[2.4.0;]" /> 
+	<necessite nom="saisies" compatibilite="[2.4.0;]" />
 
 
-	<pipeline nom="autoriser" inclure="espaces_autorisations.php" /> 
+	<pipeline nom="autoriser" inclure="espaces_autorisations.php" />
 
-	<pipeline nom="declarer_tables_objets_sql" inclure="base/espaces.php" /> 
-	<pipeline nom="declarer_tables_interfaces" inclure="base/espaces.php" /> 
-	<pipeline nom="declarer_tables_auxiliaires" inclure="base/espaces.php" /> 
-	<pipeline nom="affiche_milieu" inclure="espaces_pipelines.php" /> 
-	<pipeline nom="optimiser_base_disparus" inclure="espaces_pipelines.php" /> 
+	<pipeline nom="declarer_tables_objets_sql" inclure="base/espaces.php" />
+	<pipeline nom="declarer_tables_interfaces" inclure="base/espaces.php" />
+	<pipeline nom="declarer_tables_auxiliaires" inclure="base/espaces.php" />
+	<pipeline nom="affiche_milieu" inclure="espaces_pipelines.php" />
+	<pipeline nom="optimiser_base_disparus" inclure="espaces_pipelines.php" />
 
-	<menu nom="espaces" titre="espace:titre_espaces" parent="menu_edition" icone="images/espace-16.png" action="espaces" /> 
+	<menu nom="espaces" titre="espace:titre_espaces" parent="menu_edition" icone="images/espace-16.png" action="espaces" />
 </paquet>
