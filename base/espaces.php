@@ -47,7 +47,7 @@ function espaces_declarer_tables_objets_sql($tables) {
 		'principale' => 'oui',
 		'field'=> array(
 			'id_espace'          => 'bigint(21) NOT NULL',
-			'tirre'              => 'varchar(255) NOT NULL DEFAULT ""',
+			'titre'              => 'varchar(255) NOT NULL DEFAULT ""',
 			'descriptif'         => 'text NOT NULL DEFAULT ""',
 			'texte'              => 'text NOT NULL DEFAULT ""',
 			'mesure'             => 'int(11) NOT NULL DEFAULT 0',
@@ -67,9 +67,9 @@ function espaces_declarer_tables_objets_sql($tables) {
 		),
 		'titre' => 'titre AS titre, lang AS lang',
 		#'date' => '',
-		'champs_editables'  => array('tirre', 'descriptif', 'texte',  'mesure', 'unite'),
-		'champs_versionnes' => array('tirre', 'descriptif', 'texte',, 'mesure', 'unite'),
-		'rechercher_champs' => array("tirre" => 8, "descriptif" => 5, 'texte',),
+		'champs_editables'  => array('titre', 'descriptif', 'texte',  'mesure', 'unite'),
+		'champs_versionnes' => array('titre', 'descriptif', 'texte',, 'mesure', 'unite'),
+		'rechercher_champs' => array("titre" => 8, "descriptif" => 5, 'texte',),
 		'tables_jointures'  => array('spip_espaces_liens'),
 		'statut_textes_instituer' => array(
 			'prepa'    => 'texte_statut_en_cours_redaction',
