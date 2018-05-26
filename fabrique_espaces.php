@@ -102,7 +102,7 @@ $data = array (
         0 => 
         array (
           'nom' => 'Titre',
-          'champ' => 'tirre',
+          'champ' => 'titre',
           'sql' => 'varchar(255) NOT NULL DEFAULT \'\'',
           'caracteristiques' => 
           array (

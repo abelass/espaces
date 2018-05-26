@@ -100,7 +100,7 @@ function formulaires_editer_espace_charger_dist($id_espace = 'new', $retour = ''
 function formulaires_editer_espace_verifier_dist($id_espace = 'new', $retour = '', $associer_objet = '', $lier_trad = 0, $config_fonc = '', $row = array(), $hidden = '') {
 	$erreurs = array();
 
-	$erreurs = formulaires_editer_objet_verifier('espace', $id_espace, array('tirre'));
+	$erreurs = formulaires_editer_objet_verifier('espace', $id_espace, array('titre'));
 
 	return $erreurs;
 }
@@ -139,9 +139,9 @@ function formulaires_editer_espace_traiter_dist($id_espace = 'new', $retour = ''
 
 		if ($objet and $id_objet and autoriser('modifier', $objet, $id_objet)) {
 			include_spip('action/editer_liens');
-			
+
 			objet_associer(array('espace' => $id_espace), array($objet => $id_objet));
-			
+
 			if (isset($retours['redirect'])) {
 				$retours['redirect'] = parametre_url($retours['redirect'], 'id_lien_ajoute', $id_espace, '&');
 			}
