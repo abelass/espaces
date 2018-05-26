@@ -12,9 +12,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'ajouter_lien_espace' => 'Ajouter ce espaces',
 
 	// C
-	'champ_descriptif_label' => 'Descriptif',
 	'champ_mesure_label' => 'Mesure',
-	'champ_tirre_label' => 'Titre',
 	'champ_unite_label' => 'Unité',
 	'confirmer_supprimer_espace' => 'Confirmez-vous la suppression de cet espaces ?',
 
