@@ -19,7 +19,7 @@
 	<!-- cette balise peut être présente plusieurs fois s'il y a plusieurs auteurs -->
 	<auteur lien='https://websimple.be'>Rainer Müller</auteur>
 
-	<credit lien='https://www.flaticon.com'>www.flaticon.com</credit>
+	<credit lien='https://www.flaticon.com'>icônes par www.flaticon.com</credit>
 
 	<licence>GNU/GPL v3</licence>
 
