@@ -1,0 +1,50 @@
+<BOUCLE_content(ESPACES){id_espace}{tout}>
+<section>
+
+	<header class="cartouche">
+		[(#LOGO_ESPACE|image_reduire{200,200})]
+		<h1 class="#EDIT{titre}">#TITRE</h1>
+	</header>
+
+	<div class="main">
+		[<div class="#EDIT{texte} chapo">(#TEXTE|adaptive_images)</div>]
+		[<div class="contenu_mesure">
+			<label><:espace:champ_mesure_label:> : </label>
+			<span dir="#LANG_DIR" class="#EDIT{mesure} mesure">(#MESURE)</span>
+		</div>
+
+		[<div class="contenu_unite">
+			<label><:espace:champ_unite_label:> : </label>
+			<span dir="#LANG_DIR" class="#EDIT{unite} unite">(#UNITE)</span>
+		</div>]
+		]
+	</div>
+
+
+	<aside>
+		[(#REM) Les infos extras]
+		[(#CHEMIN{liste/objets_informations.html}|oui)
+		<INCLURE{fond=liste/objets_informations,objet=immeuble,id_objet=#ID_ESPACE,env} />
+		]
+		[(#PLUGIN{location_objets}|oui)
+			<p>
+				<a
+					class="btn btn-primary btn-large"
+					href="[(#URL_PAGE{location}
+						|parametre_url{location_objet,spip_espaces}
+						|parametre_url{id_location_objet,#ID_ESPACE}
+						|parametre_url{location_extras_objets,spip_objets_services})]">
+					<:objets_location:titre_objets_location:>
+				</a>
+			</p>
+		]
+		[(#REM) Gestion du portfolio et des documents ]
+		[(#INCLURE{fond=inclure/documents,id_immeuble})]
+	</aside>
+
+	<footer>
+		[<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
+	</footer>
+
+</section>
+</BOUCLE_content>

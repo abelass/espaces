@@ -54,4 +54,7 @@
 	<pipeline nom="optimiser_base_disparus" inclure="espaces_pipelines.php" />
 
 	<menu nom="espaces" titre="espace:titre_espaces" parent="menu_edition" icone="images/espace-16.png" action="espaces" />
+
+	<chemin path="squelettes" />
+	<chemin path="" />
 </paquet>
