@@ -13,15 +13,6 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
-
-/*
- * Un fichier de pipelines permet de regrouper
- * les fonctions de branchement de votre plugin
- * sur des pipelines existants.
- */
-
-
-
 /**
  * Ajout de contenu sur certaines pages,
  * notamment des formulaires de liaisons entre objets
@@ -55,8 +46,6 @@ function espaces_affiche_milieu($flux) {
 
 	return $flux;
 }
-
-
 
 
 /**
