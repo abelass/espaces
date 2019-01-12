@@ -3,14 +3,14 @@
  * Définit les autorisations du plugin Espaces
  *
  * @plugin     Espaces
- * @copyright  2018
+ * @copyright  2018 - 2019
  * @author     Rainer Müller
  * @licence    GNU/GPL v3
  * @package    SPIP\Espaces\Autorisations
  */
 
 if (!defined('_ECRIRE_INC_VERSION')) {
-	return;
+  return;
 }
 
 
@@ -28,13 +28,13 @@ function espaces_autoriser() {
 
 /* Exemple
 function autoriser_espaces_configurer_dist($faire, $type, $id, $qui, $opt) {
-	// type est un objet (la plupart du temps) ou une chose.
-	// autoriser('configurer', '_espaces') => $type = 'espaces'
-	// au choix :
-	return autoriser('webmestre', $type, $id, $qui, $opt); // seulement les webmestres
-	return autoriser('configurer', '', $id, $qui, $opt); // seulement les administrateurs complets
-	return $qui['statut'] == '0minirezo'; // seulement les administrateurs (même les restreints)
-	// ...
+  // type est un objet (la plupart du temps) ou une chose.
+  // autoriser('configurer', '_espaces') => $type = 'espaces'
+  // au choix :
+  return autoriser('webmestre', $type, $id, $qui, $opt); // seulement les webmestres
+  return autoriser('configurer', '', $id, $qui, $opt); // seulement les administrateurs complets
+  return $qui['statut'] == '0minirezo'; // seulement les administrateurs (même les restreints)
+  // ...
 }
 */
 
@@ -53,7 +53,7 @@ function autoriser_espaces_configurer_dist($faire, $type, $id, $qui, $opt) {
  * @return bool          true s'il a le droit, false sinon
 **/
 function autoriser_espaces_menu_dist($faire, $type, $id, $qui, $opt) {
-	return true;
+  return true;
 }
 
 
@@ -68,7 +68,7 @@ function autoriser_espaces_menu_dist($faire, $type, $id, $qui, $opt) {
  * @return bool          true s'il a le droit, false sinon
 **/
 function autoriser_espace_creer_dist($faire, $type, $id, $qui, $opt) {
-	return in_array($qui['statut'], array('0minirezo', '1comite'));
+  return in_array($qui['statut'], array('0minirezo', '1comite'));
 }
 
 /**
@@ -82,7 +82,7 @@ function autoriser_espace_creer_dist($faire, $type, $id, $qui, $opt) {
  * @return bool          true s'il a le droit, false sinon
 **/
 function autoriser_espace_voir_dist($faire, $type, $id, $qui, $opt) {
-	return true;
+  return true;
 }
 
 /**
@@ -96,7 +96,7 @@ function autoriser_espace_voir_dist($faire, $type, $id, $qui, $opt) {
  * @return bool          true s'il a le droit, false sinon
 **/
 function autoriser_espace_modifier_dist($faire, $type, $id, $qui, $opt) {
-	return in_array($qui['statut'], array('0minirezo', '1comite'));
+  return in_array($qui['statut'], array('0minirezo', '1comite'));
 }
 
 /**
@@ -110,7 +110,7 @@ function autoriser_espace_modifier_dist($faire, $type, $id, $qui, $opt) {
  * @return bool          true s'il a le droit, false sinon
 **/
 function autoriser_espace_supprimer_dist($faire, $type, $id, $qui, $opt) {
-	return $qui['statut'] == '0minirezo' and !$qui['restreint'];
+  return $qui['statut'] == '0minirezo' and !$qui['restreint'];
 }
 
 
@@ -126,5 +126,5 @@ function autoriser_espace_supprimer_dist($faire, $type, $id, $qui, $opt) {
  * @return bool          true s'il a le droit, false sinon
 **/
 function autoriser_associerespaces_dist($faire, $type, $id, $qui, $opt) {
-	return $qui['statut'] == '0minirezo' and !$qui['restreint'];
+  return $qui['statut'] == '0minirezo' and !$qui['restreint'];
 }
