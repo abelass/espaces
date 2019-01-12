@@ -28,18 +28,11 @@
 		]
 		[(#PLUGIN{location_objets}|oui)
 			<p>
-				<a
-					class="btn btn-primary btn-large"
-					href="[(#URL_PAGE{location}
-						|parametre_url{location_objet,spip_espaces}
-						|parametre_url{id_location_objet,#ID_ESPACE}
-						|parametre_url{location_extras_objets,spip_objets_services})]">
+				<a class="btn btn-primary btn-large" href="[(#URL_PAGE{location_espace}|parametre_url{id_espace,#ID_ESPACE})]">
 					<:objets_location:titre_objets_location:>
 				</a>
 			</p>
 		]
-		[(#REM) Gestion du portfolio et des documents ]
-		[(#INCLURE{fond=inclure/documents,id_immeuble})]
 	</aside>
 
 	<footer>
