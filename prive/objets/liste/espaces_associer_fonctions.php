@@ -3,14 +3,14 @@
  * Fonctions du squelette associé
  *
  * @plugin     Espaces
- * @copyright  2018
+ * @copyright  2018 - 2019
  * @author     Rainer Müller
  * @licence    GNU/GPL v3
  * @package    SPIP\Espaces\Fonctions
  */
 
 if (!defined('_ECRIRE_INC_VERSION')) {
-	return;
+  return;
 }
 
 

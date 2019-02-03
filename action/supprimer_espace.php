@@ -3,14 +3,14 @@
  * Utilisation de l'action supprimer pour l'objet espace
  *
  * @plugin     Espaces
- * @copyright  2018
+ * @copyright  2018 - 2019
  * @author     Rainer Müller
  * @licence    GNU/GPL v3
  * @package    SPIP\Espaces\Action
  */
 
 if (!defined('_ECRIRE_INC_VERSION')) {
-	return;
+  return;
 }
 
 
@@ -52,17 +52,17 @@ if (!defined('_ECRIRE_INC_VERSION')) {
  *     En absence de id utilise l'argument de l'action sécurisée.
 **/
 function action_supprimer_espace_dist($arg=null) {
-	if (is_null($arg)){
-		$securiser_action = charger_fonction('securiser_action', 'inc');
-		$arg = $securiser_action();
-	}
-	$arg = intval($arg);
+  if (is_null($arg)){
+    $securiser_action = charger_fonction('securiser_action', 'inc');
+    $arg = $securiser_action();
+  }
+  $arg = intval($arg);
 
-	// cas suppression
-	if ($arg) {
-		sql_delete('spip_espaces',  'id_espace=' . sql_quote($arg));
-	}
-	else {
-		spip_log("action_supprimer_espace_dist $arg pas compris");
-	}
+  // cas suppression
+  if ($arg) {
+    sql_delete('spip_espaces',  'id_espace=' . sql_quote($arg));
+  }
+  else {
+    spip_log("action_supprimer_espace_dist $arg pas compris");
+  }
 }

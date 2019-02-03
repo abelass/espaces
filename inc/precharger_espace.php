@@ -3,14 +3,14 @@
  * Préchargement des formulaires d'édition de espace
  *
  * @plugin     Espaces
- * @copyright  2018
+ * @copyright  2018 - 2019
  * @author     Rainer Müller
  * @licence    GNU/GPL v3
  * @package    SPIP\Espaces\Formulaires
  */
 
 if (!defined('_ECRIRE_INC_VERSION')) {
-	return;
+  return;
 }
 
 include_spip('inc/precharger_objet');
@@ -31,7 +31,7 @@ include_spip('inc/precharger_objet');
  *     Couples clés / valeurs des champs du formulaire à charger.
 **/
 function inc_precharger_espace_dist($id_espace, $id_rubrique=0, $lier_trad=0) {
-	return precharger_objet('espace', $id_espace, $id_rubrique, $lier_trad, 'titre');
+  return precharger_objet('espace', $id_espace, $id_rubrique, $lier_trad, 'titre');
 }
 
 /**
@@ -51,5 +51,5 @@ function inc_precharger_espace_dist($id_espace, $id_rubrique=0, $lier_trad=0) {
  *     Couples clés / valeurs des champs du formulaire à charger
 **/
 function inc_precharger_traduction_espace_dist($id_espace, $id_rubrique=0, $lier_trad=0) {
-	return precharger_traduction_objet('espace', $id_espace, $id_rubrique, $lier_trad, 'titre');
+  return precharger_traduction_objet('espace', $id_espace, $id_rubrique, $lier_trad, 'titre');
 }
