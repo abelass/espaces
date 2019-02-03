@@ -1,4 +1,6 @@
 <BOUCLE_content(ESPACES){id_espace}{tout}>
+	#SET{id_espace_or,#ID_ESPACE}
+	[(#ID_TRAD|>{0}|oui)#SET{id_espace_or,#ID_TRAD}]
 <section>
 
 	<header class="cartouche">
@@ -24,11 +26,11 @@
 	<aside>
 		[(#REM) Les infos extras]
 		[(#CHEMIN{liste/objets_informations.html}|oui)
-		<INCLURE{fond=liste/objets_informations,objet=immeuble,id_objet=#ID_ESPACE,env} />
+		<INCLURE{fond=liste/objets_informations,objet=immeuble,id_objet=#GET{id_espace_or},env} />
 		]
 		[(#PLUGIN{location_objets}|oui)
 			<p>
-				<a class="btn btn-primary btn-large" href="[(#URL_PAGE{location_espace}|parametre_url{id_espace,#ID_ESPACE})]">
+				<a class="btn btn-primary btn-large" href="[(#URL_PAGE{location_espace}|parametre_url{id_espace,#GET{id_espace_or}})]">
 					<:objets_location:titre_objets_location:>
 				</a>
 			</p>
